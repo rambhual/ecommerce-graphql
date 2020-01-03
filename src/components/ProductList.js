@@ -14,7 +14,7 @@ const ProductList = ({ id, title, price, description, image }) => {
   const history = useHistory();
   return (
     <Col xs="12" md="4" lg="3" className="mt-3">
-      <Card>
+      <Card className="shadow p-3 mb-5 bg-white rounded">
         <CardImg top src={image.url} alt={image.name} />
         <CardBody>
           <CardTitle>{title.substr(0, 20).concat("...")}</CardTitle>

@@ -7,11 +7,9 @@ const ProductProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   useEffect(() => {
-    setLoading(true);
     Api.get("/products")
       .then(res => setProducts(res.data))
       .catch(err => setError(err.message));
-    setLoading(false);
   }, []);
   return (
     <ProductContext.Provider
